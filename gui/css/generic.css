@@ -1,0 +1,222 @@
+body {
+	font-family:arial;
+	background-color: black; 
+	color: white;
+	overflow-y: auto;
+}
+
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+ 
+::-webkit-scrollbar-track {
+	background-color: transparant;
+}
+
+.white-track-background::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+.botConfigPre::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-corner {
+	background-color: #141414;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background-color: #b7b7b7;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+
+.divTableCell, .divTableHead {
+	display: table-cell;	
+}
+
+.divTableBody {
+	display: table-row-group;
+}	
+
+.divTableHeader {
+	font-weight: bold;
+	text-align: center;
+	width: 100px;
+	font-size: 12px;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+.x-axis svg g path, .x-axis svg path, .y-axis svg g path, .y-axis svg path {
+	stroke: #afafaf;
+}
+
+.x-axis svg g text, .y-axis svg g text {
+	fill: #afafaf;
+}
+
+d3fc-svg.y-axis svg {
+	width: 80px;
+}
+
+.up {
+	stroke: #11c120;
+	fill: #11c120;
+}
+
+.down {
+	stroke: red;
+	fill:red;
+}
+
+
+
+
+
+.bollinger .area {
+  fill: #1d2128;
+}
+
+
+
+.bollinger .line {
+  stroke-width: 1px;
+  stroke: #06c;
+}
+
+
+
+
+
+
+#cpuBar, #memoryBar {
+    width: 80px;
+	border: 1px solid #111;	
+	border-color: #141414;
+	border-radius: 5px;	
+    background-color: #1b1b1b;
+	border-radius: 5px;	
+	overflow: hidden;
+	margin-bottom:3px;
+}
+
+#cpuBar div, #memoryBar div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 18px;
+    width: 0;
+	height:100%;
+    background-color: rgb(175, 175, 175);
+}
+
+
+
+#gridSearchInput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: gray;
+}
+#gridSearchInput::-moz-placeholder { /* Firefox 19+ */
+  color: gray;
+}
+#gridSearchInput:-ms-input-placeholder { /* IE 10+ */
+  color: gray;
+}
+#gridSearchInput:-moz-placeholder { /* Firefox 18- */
+  color: gray;
+}
+
+
+#gridSearchInput {
+    width: 100%;
+	margin-top:5px;
+	font-size:11px;
+	height:28px;
+	background-color: #1b1b1b;
+    color: rgb(175, 175, 175);
+	border: solid 2px #141414;
+	border-radius: 10px;
+	padding-left: 24px;
+	padding-right: 20px;
+}
+
+#gridSearchClear, #gridSearchIcon {
+    position: absolute;
+    font-size: 12px;
+    color: gray;
+    height: 14px;
+    margin: auto;
+}
+
+#gridSearchClear {
+	right: 5px;
+    top: 7px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+#gridSearchIcon {
+    left: 5px;
+    top: 7px;
+    bottom: 0;	
+}
+
+#gridSearchClear:hover {
+    color: rgb(175, 175, 175);
+}
+
+
+
+.green-pulse {
+  -webkit-animation: green-pulse 3s infinite;
+  -moz-animation: green-pulse 3s infinite;
+  animation: green-pulse 3s infinite;
+}
+
+@keyframes green-pulse {
+  1%   { fill: forestgreen; }
+  30%  { fill: #a3ffb0; }
+  60% { fill: forestgreen; }
+}
+
+@-webkit-keyframes green-pulse {
+  1%   { fill: forestgreen; }
+  30%  { fill: #a3ffb0; }
+  60% { fill: forestgreen; }
+}
+
+
+
+.red-pulse {
+  -webkit-animation: red-pulse 3s infinite;
+  -moz-animation: red-pulse 3s infinite;
+  animation: red-pulse 3s infinite;
+}
+
+
+@keyframes red-pulse {
+  10%   { fill: #c9302c; }
+  30%  { fill: #ff8b87; }
+  60% { fill: #c9302c; }
+}
+
+@-webkit-keyframes red-pulse {
+  10%   { fill: #c9302c; }
+  30%  { fill: #ff8b87; }
+  60% { fill: #c9302c; }
+}
+
+

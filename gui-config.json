@@ -1,0 +1,42 @@
+{
+	"password": "8itcoinJunki3!",
+	"secret": "pald6fge2xn",
+	"name": "",
+	"ipWhitelist": [
+		"64.78.220.3",
+		"96.85.108.102",
+		"::ffff:69.207.52.192",
+		"68.56.185.116",
+		"99.203.143.97"
+	],
+	"port": 8080,
+	"apiKeys": {
+		"ui": {
+			"key": "NXB9ONJN-0YKK132Y-PTXX5RTZ-M2GAFABR-GRVE5SHO-AMVMFY23"
+		},
+		"poloniex": {
+			"key": "RVB606KQ-G179CBXF-3QZT83SN-JSAGL432",
+			"secret": "7897cab47119321209b8b23ba551e60b216b38701dcd7b8f608b622701a213d54c8c87e2f02376919c8de72edbcb461ecd7a329b324416239c798446d8a55521"
+		},
+		"kraken": {
+			"key": "",
+			"secret": ""
+		},
+		"bittrex": {
+			"key": "",
+			"secret": ""
+		},
+		"cryptopia": {
+			"key": "",
+			"secret": ""
+		}
+	},
+	"intervalSeconds": {
+		"ticker": 60,
+		"exchangeData": 120
+	},
+	"gunbotBinary": "gunthy-linx64",
+	"readOnly": false,
+	"initialSetup": true,
+	"enableSSL": false
+}

@@ -1,0 +1,128 @@
+[
+	{
+		"gunbotVersion": "3.3.3+",
+		"exchange": "poloniex",
+		"pair": "BTC_XRP",
+		"config": {
+			"strategy": "gain",
+			"override": {
+				"BTC_TRADING_LIMIT": 0.05,
+				"PERIOD": 15,
+				"BUY_LEVEL": 0.1,
+				"GAIN": 3,
+				"EMA1": 5,
+				"EMA2": 1,
+				"PANIC_SELL": false,
+				"STOP_LIMIT": 60,
+				"BUY_ENABLED": true,
+				"MIN_VOLUME_TO_BUY": 0.001,
+				"MIN_VOLUME_TO_SELL": 0.001
+			}
+		}
+	},
+	{
+		"gunbotVersion": "3.3.3+",
+		"exchange": "poloniex",
+		"pair": "BTC_BCH",
+		"config": {
+			"strategy": "gain",
+			"override": {
+				"BTC_TRADING_LIMIT": 0.03,
+				"PERIOD": 15,
+				"BUY_LEVEL": 0.1,
+				"GAIN": 3,
+				"EMA1": 5,
+				"EMA2": 1,
+				"PANIC_SELL": false,
+				"STOP_LIMIT": 60,
+				"BUY_ENABLED": true,
+				"MIN_VOLUME_TO_BUY": 0.001,
+				"MIN_VOLUME_TO_SELL": 0.001
+			}
+		}
+	},
+	{
+		"gunbotVersion": "3.3.3+",
+		"exchange": "poloniex",
+		"pair": "BTC_DASH",
+		"config": {
+			"strategy": "gain",
+			"override": {
+				"BTC_TRADING_LIMIT": 0.03,
+				"PERIOD": 15,
+				"BUY_LEVEL": 0.1,
+				"GAIN": 3,
+				"EMA1": 5,
+				"EMA2": 1,
+				"PANIC_SELL": false,
+				"STOP_LIMIT": 60,
+				"BUY_ENABLED": true,
+				"MIN_VOLUME_TO_BUY": 0.001,
+				"MIN_VOLUME_TO_SELL": 0.001
+			}
+		}
+	},
+	{
+		"gunbotVersion": "3.3.3+",
+		"exchange": "poloniex",
+		"pair": "BTC_ETH",
+		"config": {
+			"strategy": "gain",
+			"override": {
+				"BTC_TRADING_LIMIT": 0.02,
+				"PERIOD": 15,
+				"BUY_LEVEL": 0.2,
+				"GAIN": 3,
+				"EMA1": 5,
+				"EMA2": 1,
+				"PANIC_SELL": false,
+				"STOP_LIMIT": 60,
+				"BUY_ENABLED": true,
+				"MIN_VOLUME_TO_BUY": 0.001,
+				"MIN_VOLUME_TO_SELL": 0.001
+			}
+		}
+	},
+	{
+		"gunbotVersion": "3.3.3+",
+		"exchange": "poloniex",
+		"pair": "BTC_LTC",
+		"config": {
+			"strategy": "gain",
+			"override": {
+				"BTC_TRADING_LIMIT": 0.02,
+				"PERIOD": 15,
+				"BUY_LEVEL": 0.1,
+				"GAIN": 3,
+				"EMA1": 5,
+				"EMA2": 1,
+				"PANIC_SELL": false,
+				"STOP_LIMIT": 60,
+				"BUY_ENABLED": true,
+				"MIN_VOLUME_TO_BUY": 0.001,
+				"MIN_VOLUME_TO_SELL": 0.001
+			}
+		}
+	},
+	{
+		"gunbotVersion": "3.3.3+",
+		"exchange": "poloniex",
+		"pair": "BTC_XMR",
+		"config": {
+			"strategy": "gain",
+			"override": {
+				"BTC_TRADING_LIMIT": 0.05,
+				"PERIOD": 15,
+				"BUY_LEVEL": 0.1,
+				"GAIN": 3,
+				"EMA1": 5,
+				"EMA2": 1,
+				"PANIC_SELL": false,
+				"STOP_LIMIT": 60,
+				"BUY_ENABLED": true,
+				"MIN_VOLUME_TO_BUY": 0.001,
+				"MIN_VOLUME_TO_SELL": 0.001
+			}
+		}
+	}
+]

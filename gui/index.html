@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title>Gunthy GUI</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+
+		<script src="js/lib/jquery.min-3.1.0.js"></script>
+		<script src="js/lib/bootstrap.min-3.3.7.js"></script>
+		<script src="js/lib/jstorage.min-0.4.12.js"></script>
+		<script src="js/lib/bootstrap-toggle.min-2.2.2.js"></script>
+		<script src="js/lib/socket.io-1.7.3.js"></script>
+		<script src="js/lib/d3.min-4.7.4.js"></script>
+		<script src="js/lib/d3fc.min-12.1.0.js"></script>
+		<script src="js/lib/autobahn.min.jgz"></script>
+		<script src="js/lib/thenby.min.js"></script>
+		<script src="js/lib/validator-min-0.11.9.js"></script>
+		<script src="js/lib/firstby-1.2.3-min.js"></script>
+
+		<script>
+			var bots = [];
+			var tradeHistory = [];
+			var totalBalances = {};
+			var jsonEditors = {};
+			var pausedLogs = {};
+			var restartRequired = false;
+			var authRequired = false;
+			var twoFactorEnabled = false;
+			var gridInitialized = false;
+			var gettingOpenOrders = false;
+			var currentLogIndex = -1;
+			var animationPeriod = 300;
+			var errorStack = null;
+			var window_focus;
+			var logInterval;
+			
+
+			var docElem = document.documentElement;
+			var dragCounter = 0;
+			var mainGrid;
+			var sortGrid;
+			var muuriInstances = [];
+			
+			$(window).focus(function() {
+				window_focus = true;
+			}).blur(function() {
+				window_focus = false;
+			});
+		</script>
+				
+		<script src="js/gui.js"></script>
+
+		<link rel="stylesheet" href="css/lib/bootstrap.min-3.3.7.css">
+		<link rel="stylesheet" href="css/lib/bootstrap-toggle.min-2.2.2.css">
+		<link rel="stylesheet" href="css/generic.css">
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="css/muuri.css">
+		
+	</head>
+
+	<body>
+			
+		
+		<!-- Login form -->
+		<div class="login" id="login" style="display:none; position:absolute; left:50%; top:50%; width:250px; height:250px; margin-left:-125px; margin-top:-125px;">
+			<form onsubmit="return false;">
+				  <label id="pwd-label" for="pwd" style="width:100%; text-align:center; color: #bcbcbc; font-size:15px;">Password:</label>
+				<div class="form-group">
+				  <input type="password" onkeyup="if (event.keyCode == 13) $('#pwd-button').click()" class="form-control" id="pwd">
+				</div>
+				<div class="form-group">
+				  <label id="2fa-label" for="2fa-token" style="width:100%; text-align:center; color: #bcbcbc; font-size:15px;">2FA Token:</label>
+				  <input id="2fa-token" type="text" onkeyup="if (event.keyCode == 13) $('#pwd-button').click()" class="form-control">
+				</div>
+				<button id="pwd-button" type="button" class="btn btn-primary" style="width:100%;">Login</button>
+			</form>
+		</div>
+		
+
+		<!-- Content wrapper -->
+		<div id="wrapper" style="display:none;">		
+			<div class="divTable" style=" width:auto; min-width:480px; height: 85px; font-size: 12px; color: rgb(175, 175, 175); margin: 0 auto; padding-top:8px; font-size:11px;">
+				<div class="divTableBody">
+					<div class="divTableRow">
+					
+						<div class="divTableCell" style="width:120px; padding:0px;">
+							<div class="divTable" id="sysInfoTable">
+								<div class="divTableBody">
+									<div class="divTableRow">
+										<div class="divTableCell">CPU:&nbsp;</div>
+										<div class="divTableCell"><div id="cpuBar" class="gagueDefault"><div></div></div></div>
+									</div>
+									<div class="divTableRow">
+										<div class="divTableCell">RAM:&nbsp;</div>
+										<div class="divTableCell"><div id="memoryBar" class="gagueDefault"><div></div></div></div>
+									</div>
+								</div>
+							</div>
+							<div id="sysInfoUptime" style="padding-top:2px;"></div>
+						</div>
+						
+						<div class="divTableCell" style="font-size:11px; padding-left: 15px; padding-top:0px; width:130px;">
+							<div class="divTable">
+								<div class="divTableBody">
+									
+									<div class="divTableRow" style="font-weight:bold;">
+										<div class="divTableCell" style="padding:0px;">Balance:</div>
+										<span id="total-balances-total" class="divTableCell"></span>
+									</div>
+									
+									<div class="divTableRow">
+										<div class="divTableCell total-balances" style="padding:0px;" data-exchange="poloniex">Poloniex:</div>
+										<div id="total-balances-poloniex" class="divTableCell"></div>
+									</div>
+									
+									<div class="divTableRow">
+										<div class="divTableCell total-balances" style="padding:0px;" data-exchange="bittrex">Bittrex:</div>
+										<div id="total-balances-bittrex" class="divTableCell"></div>
+									</div>
+									
+									<div class="divTableRow">
+										<div class="divTableCell total-balances" style="padding:0px;" data-exchange="kraken">Kraken:</div>
+										<div id="total-balances-kraken" class="divTableCell"></div>
+									</div>
+									
+									<div class="divTableRow">
+										<div class="divTableCell total-balances" style="padding:0px;" data-exchange="cryptopia">Cryptopia:</div>
+										<div id="total-balances-cryptopia" class="divTableCell"></div>
+									</div>
+
+								</div>
+							</div>
+					
+						</div>
+						
+						<div class="divTableCell" style="font-size:11px; text-align: center; padding-top:0px; width:80px; position: relative;">
+						
+							<img id="gunbotLoading" src="images/loading.gif" width="28" height="28" border=0 style="position: absolute; left: 25px; text-align: center; top: 10px;"/>
+							
+							<div style="position: absolute; left: 15px; text-align: center; top: 5px;">
+								
+								<div id="gunbotSvgContainer" style="cursor: pointer; height:36px;" onclick="socket.emit('toggleGunbot'); currentLogIndex = -1; $('#gunbotSvgGreen').fadeOut(animationPeriod / 2); $('#gunbotSvgRed').fadeOut(animationPeriod / 2); $('#gunbotLoading').fadeIn(animationPeriod / 2);">
+									<svg id="gunbotSvgGreen" width="38" height="38"  xmlns="http://www.w3.org/2000/svg" style="display:none">
+										<circle id="gunbotSvgGreenCircle" cx="19" cy="19" r="17" stroke="#1b1b1b" stroke-width="3" fill="forestgreen" class="green-pulse"></circle>
+										<text x="7" y="30" font-family="Arial" font-weight="bold" font-size="30" fill="#1b1b1b">G</text>
+									</svg>
+									<svg id="gunbotSvgRed" width="38" height="38"  xmlns="http://www.w3.org/2000/svg" style="display:none">
+										<circle id="gunbotSvgRedCircle" cx="19" cy="19" r="17" stroke="#1b1b1b" stroke-width="3" fill="#c9302c" class="red-pulse"></circle>
+										<text x="7" y="30" font-family="Arial" font-weight="bold" font-size="30" fill="#1b1b1b">G</text>
+									</svg>
+								</div>
+																
+								<div class="btn-group" role="group" style="padding-top: 3px;">
+									<button type="button" id="gunbotConfigButton" class="btn btn-default btn-xs" style="background-color: #1b1b1b; border: solid 1px #141414;" alt="Gunbot configuration" title="Gunbot configuration">
+										<span class="glyphicon glyphicon-cog" style="color: rgb(175, 175, 175);"></span>
+									</button>
+									<button type="button" id="gunbotStrategiesButton" class="btn btn-default btn-xs" style="background-color: #1b1b1b; border: solid 1px #141414;" alt="Gunbot strategies" title="Gunbot strategies">
+										<span class="glyphicon glyphicon-wrench" style="color: rgb(175, 175, 175);"></span>
+									</button>
+								</div>
+								
+							</div>
+										
+						</div>
+						
+						<div class="divTableCell" style="width:150px; position:relative;">
+							<div class="btn-group">
+								<span id="gridSearchIcon" style="color: rgb(175, 175, 175);" class="glyphicon glyphicon-search"></span>
+								<input id="gridSearchInput" type="search" class="form-control" placeholder="Search ..">
+								<span id="gridSearchClear" class="glyphicon glyphicon-remove-circle"></span>
+							</div>
+						
+							<br/>
+						
+							<button type="button" class="btn btn-default btn-md btn-primary" onclick="$(this).blur(); showGuiConfigEdit()" style="margin-top:2px; background-color:#1b1b1b; border: solid 1px #141414; position: absolute; right: 0px; top: 34px; border-radius:6px; padding:4px 10px 4px 10px;"><span alt="GUI Options" title="GUI Options" class="glyphicon glyphicon-cog" style="color:rgb(175, 175, 175); font-size:18px; line-height:18px; "></span></button>
+						
+							<div style="width:130px; position:absolute; right:40px; top: 38px; z-index:10; text-align:right;">
+								<span style="cursor:pointer" onclick="el = $('#sortContent'); if(el.css('display') == 'none') $('#gridOptions').fadeOut(animationPeriod); el.css('display') == 'none' ? el.fadeIn(animationPeriod) : el.fadeOut(animationPeriod); sortGrid.refreshItems().layout(true);">Sorting / filtering &nbsp;</span>
+										
+								<div id="sortContent" style="display:none;" class="sort-content">
+									<div class="sort-grid-column-content muuri" style="text-align:left;">
+										<div class="sort-grid-item muuri-item muuri-item-shown" sort-type="enabled">
+											<span style="cursor:pointer;" class="glyphicon sort-filter"></span>
+											<span style="cursor:pointer;" class="glyphicon sort-asc-dec"></span>
+											<span style="cursor:move;" class="glyphicon glyphicon-move move-icon-enabled"></span>
+											Enabled
+										</div>
+										<div class="sort-grid-item muuri-item muuri-item-shown" sort-type="balances">
+											<span style="cursor:pointer;" class="glyphicon sort-filter"></span>
+											<span style="cursor:pointer;" class="glyphicon sort-asc-dec"></span>
+											<span style="cursor:move;" class="glyphicon glyphicon-move move-icon-balances"></span>
+											Balances
+										</div>
+										<div class="sort-grid-item muuri-item muuri-item-shown" sort-type="pair">
+											<span style="cursor:pointer; margin-left:15px;" class="glyphicon sort-asc-dec"></span>
+											<span style="cursor:move;" class="glyphicon glyphicon-move move-icon-pair"></span>
+											Pair
+										</div>
+										<div class="sort-grid-item muuri-item muuri-item-shown" sort-type="exchange">
+											<span style="cursor:pointer; margin-left:15px;" class="glyphicon sort-asc-dec"></span>
+											<span style="cursor:move;" class="glyphicon glyphicon-move move-icon-exchange"></span>
+											Exchange
+										</div>
+										<div class="sort-grid-item muuri-item muuri-item-shown" sort-type="recenttrade">
+											<span style="cursor:pointer;" class="glyphicon sort-filter"></span>
+											<span style="cursor:pointer;" class="glyphicon sort-asc-dec"></span>
+											<span style="cursor:move;" class="glyphicon glyphicon-move move-icon-recenttrade"></span>
+											Recent trade
+										</div>
+									</div>
+									
+									<div style="padding:5px; text-align: center;  border-top: solid 1px black;">
+										<div style="cursor: pointer;" onclick="defaultSortGrid();">Set defaults</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div style="width:110px; position:absolute; right:40px; top: 54px; text-align:right; z-index:5; ">
+								<span style="cursor:pointer; z-index:1; " onclick="el = $('#gridOptions'); if(el.css('display') == 'none') $('#sortContent').fadeOut(animationPeriod); el.css('display') == 'none' ? el.fadeIn(animationPeriod) : el.fadeOut(animationPeriod);">Grid options &nbsp;</span>
+								
+								<div id="gridOptions" style="display:none; text-align:left;	padding-top:5px;text-align:center;" class="grid-options">
+									Minimum size
+									<div class="btn-group" role="group" style="min-width:70px; padding-bottom:8px;">
+										<button type="button" class="btn btn-primary btn-xs grid-size-button" data-size="s">S</button>
+										<button type="button" class="btn btn-primary btn-xs grid-size-button" data-size="m">M</button>
+										<button type="button" class="btn btn-primary btn-xs grid-size-button" data-size="l">L</button>
+										<button type="button" class="btn btn-primary btn-xs grid-size-button" data-size="xl">XL</button>
+									</div>
+									<div style="text-align: center;  border-top: solid 1px black; padding-top:2px;">
+										<input id="gridOptionsAnimations" type="checkbox"> <label style="font-weight: normal" for="gridOptionsAnimations">Animations</label>
+									</div>
+									<div style="text-align: center;  border-top: solid 1px black; padding-top:2px;">
+										<input id="gridOptionsColoredLogs" type="checkbox"> <label style="font-weight: normal" for="gridOptionsColoredLogs">Colored logs</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="page-content-wrapper" class="main-grid-column-content muuri"></div>
+		</div>
+		
+					
+		
+		<!-- Gunbot configuration Modal -->
+		<div class="modal fade" id="gunbotConfigModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="gunbotConfigLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gunbotConfigLabel">Gunbot configuration</h4>
+			  </div>
+			  <div id="gunbotConfigBody" class="modal-body"></div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="gunbotConfigSaveButton" class="btn btn-primary">Save</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		
+				
+		<!-- Gunbot strategies Modal -->
+		<div class="modal fade" id="gunbotStrategiesModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="gunbotStrategiesLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gunbotStrategiesLabel">Gunbot strategies</h4>
+			  </div>
+			  <div id="gunbotStrategiesBody" class="modal-body"></div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="gunbotStrategiesSaveButton" class="btn btn-primary">Save</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+					
+		<!-- Toggle Bot Modal -->
+		<div class="modal fade" id="toggleBotModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="toggleBotLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="toggleBotLabel">Are you sure?</h4>
+			  </div>
+			  <div id="toggleBotSelectionLabel" class="modal-body"></div>
+			  <div id="toggleBotSelection" class="modal-body white-track-background" style="max-height: 400px; overflow-y:auto; padding-top:0px;"></div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" id="toggleBotConfirm" class="btn">Turn off</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+
+		<!-- New Bot Modal -->
+		<div class="modal fade" id="newBotModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="newBotLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" id ="newBotClose" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="newBotLabel">Add new pairs to GUI</h4>
+			  </div>
+			  <div id="newBotBody" class="modal-body"></div>
+			  <div class="modal-footer">
+				<label for="new-bot-pair-confirm" style="position: inline-block; font-weight: normal;">Confirm selection</span> <input id="new-bot-pair-confirm" style="position: inline-block" type="checkbox" disabled>
+				<button type="button" id="newBotCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" id="newBotConfirm" class="btn btn-primary">Add pairs</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		
+		
+		<!-- Edit Bot Config Modal -->
+		<div class="modal fade" id="editBotConfigModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="editBotConfigLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="editBotConfigLabel">Bot configuration</h4>
+			  </div>
+			  <div id="editBotConfigBody" class="modal-body"></div>
+			  <div class="modal-footer">
+				<div style="display:inline-block; margin-right:20px;" id="editBotConfigNote"></div>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="configBotRemoveButton" style="pointer-events: auto;" class="btn btn-danger">Delete this bot</button>
+				<button id="editBotConfigSaveButton" class="btn btn-primary">Save</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		
+		<!-- Balances & Orders Modal -->
+		<div class="modal fade" id="balancesOrdersModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="balancesOrdersLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="balancesOrdersLabel">Balances and orders</h4>
+			  </div>
+			  <div id="balancesOrdersBody" class="modal-body">
+				<div id="balancesOrdersBalances"></div>
+				<div id="balancesOrdersOpenOrders" class="container-fluid white-track-background" style="max-height:350px; overflow-y:auto;"></div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		
+		<!-- SSL Configuration Modal -->
+		<div class="modal fade" id="configureSslModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="configureSslLabel" style="color:black;">
+		  <div class="modal-dialog" style="width:600px;" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" id ="configureSslClose" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="configureSslLabel">SSL configuration</h4>
+			  </div>
+			  <div id="configureSslBody" class="modal-body">
+				<div id="configureSslIntroduction" style="margin-bottom: 15px;">
+					In order to ensure security, your first step will be to set up the SSL layer of your GUI. Using SSL means connecting over HTTPS, instead of HTTP. This makes sure your interactions with the GUI (for example setting a password) are less likely to be intercepted by others.
+					<hr/>
+				</div>
+											
+				<div id="configureSslSelectType" class="form-horizontal" style="text-align:center">
+					<div class="form-group">
+						<div class="col-xs-4">
+							<div style="font-weight:bold">Upload certificate</div>
+							<img width="80" height="80" src="images/ssl-green.png"/>
+							<div style="margin-top:5px"><input id="configureSslTypeCustom" type="radio" value="custom" name="configureSslCertificate" disabled></div>
+							<div style="font-size:10px;">Recommended but not required, as it is not an option available to everyone.</div>
+							<div style="margin-top:15px; font-size:13px;">
+								<div id="configureSslUploadLabel" style="font-weight:bold;">File upload</div>
+								<button id="configureSslUploadKey" class="btn btn-basic btn-sm">Private key</button>
+								<button id="configureSslUploadCert" class="btn btn-basic btn-sm">Certificate</button>
+							</div>
+							
+							<input id="configureSslUploadFile" type="file" style="display:none;"/>							
+						</div>
+						<div class="col-xs-4" style="border-left: solid 1px #eee; border-right: solid 1px #eee;">
+							<div style="font-weight:bold">Self-signed certificate</div>
+							<img width="80" height="80" src="images/ssl-yellow.png"/>
+							<div style="margin-top:5px"><input id="configureSslTypeSelfSigned" type="radio" value="selfsigned" name="configureSslCertificate" disabled></div>
+							<div style="font-size:10px;">Recommended as minimum, requires <a href="https://www.openssl.org/" target="_blank">OpenSSL</a> installed on your system.</div>
+							<div style="margin-top:15px; font-size:13px;">
+								<div id="configureSslGenerateLabel" style="font-weight:bold;">Generate certificate</div>
+								<button id="configureSslGenerateCert" class="btn btn-basic btn-sm" onclick="$(this).attr('disabled', true); socket.emit('generateCertificate');">Generate</button>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div style="font-weight:bold">No certificate</div>
+							<img width="80" height="80" src="images/ssl-red.png"/>
+							<div style="margin-top:5px"><input id="configureSslTypeNone" type="radio" value="none" name="configureSslCertificate"></div>
+							<div style="font-size:10px;">Not recommended, make sure you enable 2FA and IP whitelist!</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div id="configureSslCertInfo" class="form-horizontal">
+					<div class="form-group">
+						<div class="col-xs-2" style="text-align:right; margin-top:0px;">
+							<img width="80" height="80" id="configureSslCurrentTypeImg" src=""/>
+						</div>
+						<div class="col-xs-10" style="text-align:left; margin-top:0px;">
+							<b>Domain name:</b> <span id="configureSslCertInfoSanDns"></span>
+							<br/><b>IP address:</b> <span id="configureSslCertInfoSanIp"></span>
+						</div>
+					</div>
+					
+					<hr/>
+					
+					<div class="form-group">
+						<div class="col-xs-4">
+							<div style="font-weight:bold">Certificate</div>
+							<div style="font-size:10px; margin-top:3px;">
+								<b>Country:</b> <span id="configureSslCertInfoCountry"></span>
+								<br/><b>Organization:</b> <span id="configureSslCertInfoOrganization"></span>
+								<br/><b>Common name:</b> <span id="configureSslCertInfoCommonName"></span>		
+								<br/><b>Valid from:</b> <span id="configureSslCertInfoValidFrom"></span>
+								<br/><b>Valid to:</b> <span id="configureSslCertInfoValidTo"></span>	
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div style="font-weight:bold;">Issuer</div>
+							<div style="font-size:10px; margin-top:3px;">
+								<b>Country:</b> <span id="configureSslCertInfoIssuerCountry"></span>
+								<br/><b>Organization:</b> <span id="configureSslCertInfoIssuerOrganization"></span>
+								<br/><b>Common name:</b> <span id="configureSslCertInfoIssuerCommonName"></span>
+							
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div style="font-weight:bold;">Algorithm</div>
+							<div style="font-size:10px; margin-top:3px;">
+								<b>Key algorithm:</b> <span id="configureSslCertInfoAlgoKeyAlgo"></span>
+								<br/><b>Key size:</b> <span id="configureSslCertInfoAlgoKeySize"></span>
+								<br/><b>Signature algorithm:</b> <span id="configureSslCertInfoAlgoSignAlgo"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			  </div>
+			  
+			  <div class="modal-footer">
+				<span style="margin-right:15px; font-style:italic">Saving will shut down the GUI, restart required</span>
+				<button id="configureSslCancel" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="configureSslEdit" class="btn btn-primary" onclick="$(this).fadeOut(0); $('#configureSslSave').fadeIn(0); $('#configureSslSelectType').fadeIn(0); $('#configureSslCertInfo').fadeOut(0);">Edit</button>
+				<button id="configureSslSave" class="btn btn-primary" data-dismiss="modal">Save</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+	
+		
+		
+		<!-- GUI Options Modal -->
+		<div class="modal fade" id="guiOptionsModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="guiOptionsLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="guiOptionsLabel">GUI Options</h4>
+			  </div>
+			  <div id="guiOptionsBody" class="modal-body">
+				  <div style="display:inline-block; height: 90px; width:275px; text-align:center;">
+					<h4>Add new pairs to GUI</h4>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="socket.emit('requestNewBot'); $('#loadingBotsModal').modal('show');">Add pairs</button>
+				  </div>
+				  <div style="display:inline-block; height: 90px; width:275px; text-align:center;">
+					<h4>Edit server configuration</h4>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="socket.emit('editConfig');">Edit configuration</button>
+				  </div>
+				  <div style="display:inline-block; height: 90px; width:275px; text-align:center;">
+					<h4>Reload all pairs</h4>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="socket.emit('resetBots');">Reload pairs</button>
+				  </div>
+				  <div style="display:inline-block; height: 90px; width:275px; text-align:center;">
+					<h4>Edit SSL configuration</h4>
+					<button id="getSslConfigButton" type="button" class="btn btn-primary" onclick="$(this).attr('disabled', true); socket.emit('getSslConfig');">Edit configuration</button>
+				  </div>
+				  <div style="display:inline-block; height: 90px; width:275px; text-align:center;">
+					<h4 id="enable2FAH4"></h4>
+					<button id="enable2FAToggle" type="button" class="btn btn-primary" data-dismiss="modal"></button>
+				  </div>
+				  <div style="display:inline-block; height: 90px; width:275px; text-align:center;">
+					<h4>View GUI log</h4>
+					<button id="getGuiLogsButton" type="button" class="btn btn-primary" onclick="$(this).attr('disabled', true); socket.emit('getGuiLogs');">View log</button>
+				  </div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	
+
+
+		<!-- Loading Bots Modal -->
+		<div class="modal fade" id="loadingBotsModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="loadingBotsLabel" style="color:black;">
+		  <div class="modal-dialog" role="document" style=" width: 100%; height: 100%; margin: 0; padding: 0;">
+			<div class="modal-content" style="height: auto; min-height: 100%; border-radius: 0; background-color:transparent">
+				<img src="images/loading.gif" width="300" height="300" border=0 style="position: absolute; margin: auto; top: 0; left: 0;right: 0; bottom: 0;"/>
+			</div>
+		  </div>
+		</div>
+
+		
+		<!-- First time Modal -->
+		<div class="modal fade" id="firstTimeModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="firstTimeLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h4 class="modal-title" id="firstTimeLabel">Welcome to your gunbot user interface!</h4>
+			  </div>
+			  <div id="firstTimeBody" class="modal-body">
+				<div style="padding-left: 5%; padding-right: 5%; font-size:13px;">
+				
+					<!-- <div style="font-style:italic; text-align:center;">Manage your bots with ease and view relevant data in near realtime.</div> -->
+					<div style="font-style:italic; text-align:center; width:100%">Please take a moment to read the following:</div>
+				
+					<div style="width:100%; text-align:center; font-weight:bold; margin-top: 25px;"><span class="glyphicon glyphicon-list"></span> Logs</div>
+					<div>Whenever your bot is enabled, you will be able to monitor the log output it produces. If a maximum price to buy or minimum price to sell is detected in a log entry, the targets will update accordingly.</div>
+					
+					<div style="width:100%; text-align:center; font-weight:bold; margin-top: 15px;"><span class="glyphicon glyphicon-signal"></span> OHLC chart</div>
+					<div>In case you need to quickly check the latest price development of your pairs, you can use the OHLC chart. Whenever a new ticker price is received, the chart will update. It will also refresh every 60 seconds.</div>
+					
+					<div style="width:100%; text-align:center; font-weight:bold; margin-top: 15px;"><span class="glyphicon glyphicon-transfer"></span> Trade history</div>
+					<div>Everybody loves to see profits rise over time. You can do so with the trade history charts. They might be a bit confusing in the beginning, but they can be easily read once understood.</div>
+
+					<div style="width:100%; text-align:center; font-weight:bold; margin-top: 15px;">Holding shift</div>
+					<div>For your convenience, some actions can be applied to multiple targets. For example, whenever you click a panel button (let's say trade history), by holding shift, the selection will apply to all bots. This also applies to changing chart periods.</div>
+
+				</div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" id="firstTimeContinue" onclick="socket.emit('requestNewBot'); $(this).attr('disabled', 'disabled');" class="btn btn-primary">Add first bot</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+			
+						
+		<!-- GUI Logs Modal -->
+		<div class="modal fade" id="guiLogsModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="guiLogsLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="guiLogsLabel">GUI log (500 most recent lines)</h4>
+			  </div>
+			  <div id="guiLogsBody" style="height: 400px; overflow:auto;" class="modal-body white-track-background"> </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		
+								
+		<!-- Enable 2FA Modal -->
+		<div class="modal fade" id="enable2FAModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="enable2FALabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="enable2FALabel">Enable two-factor authentication</h4>
+			  </div>
+			  <div id="enable2FABody" style="overflow:auto; text-align:center;" class="modal-body white-track-background">
+			  
+			  	<img id="enable2FAQRCode" width="200" height="200" src=""/>
+				<div>Please use your TOTP authentication application to verify your setup.</div>
+				<div style="font-size:10px;">For example: <a href="https://authy.com/" target="_blank">Authy</a> or <a href="https://support.google.com/accounts/answer/1066447?hl=en" target="_blank">Google Authenticator</a></div>
+				
+				<div class="form-horizontal">
+					<div class="form-group" style="margin-top: 15px;">
+						<label style="text-align:right; padding-right:0px;" class="col-xs-4 control-label">Token: </label>
+						<div class="col-xs-3">
+							<input id="enable2FAToken" type="text" class="form-control"/>
+						</div>
+						<button id="enable2FAVerify" class="btn btn-primary col-xs-2">Verify</button>
+					</div>
+				</div>
+				
+			  </div>
+			  <div class="modal-footer">
+				<span style="margin-right:15px; font-style:italic">Saving will shut down the GUI, restart required</span>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button id="enable2FASave" type="button" class="btn btn-primary" data-dismiss="modal" onclick="restartRequired = true; socket.emit('save2FA')">Save</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		
+		<!-- Edit configuration Modal -->
+		<div class="modal fade" id="editConfigModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="editConfigLabel" style="color:black;">
+		  <div class="modal-dialog" style="width:650px;" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" id ="editConfigClose" data-dismiss="modal" aria-label="Cancel"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="editConfigLabel">Server configuration</h4>
+			  </div>
+			  <div id="editConfigBody" class="modal-body">
+
+				<form id="editConfigForm" role="form" data-toggle="validator" class="form-horizontal">
+
+					<div id="editConfigContainer" style="max-height:450px; overflow-y:auto; overflow-x:hidden;" class="white-track-background">
+				
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-2 control-label">Password</label>
+							<div class="col-xs-6">
+								<input type="password" data-minlength="8" class="form-control edit-config-input" id="edit-config-password">
+							</div>
+							<small>Enter a strong password,<br/> minimum of 8 characters.</small>
+						</div>
+						
+						<hr class="form-hr"/>
+
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-3 control-label">Web server port</label>
+							<div class="col-xs-3">
+								<input type="text" pattern="^[0-9]{2,6}$" class="form-control edit-config-input" id="edit-config-port"/>
+							</div>
+							<small>The GUI server will use this port.<br/>If you are not sure which to use, leave default (8080)</small>
+						</div>
+												
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Ticker interval (sec)</label>
+							<div class="col-xs-2">
+								<input type="text" pattern="^[0-9]{2,6}$" class="form-control edit-config-input" id="edit-config-intervalSeconds-ticker"/>
+							</div>
+							<small>Determines how often the ticker is retrieved.<br/>The server applies a minimum of 60 seconds.</small>
+						</div>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Exchange interval (sec)</label>
+							<div class="col-xs-2">
+								<input type="text" pattern="^[0-9]{2,6}$" class="form-control edit-config-input" id="edit-config-intervalSeconds-exchangeData"/>
+							</div>
+							<small>Determines how often the exchange data is retrieved.<br/>The server applies a minimum of 120 seconds.</small>
+						</div>
+						
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-3 control-label">Gunbot executable</label>
+							<div class="col-xs-4">
+								<input type="text" data-minlength="5" class="form-control edit-config-input" id="edit-config-gunbotBinary"/>
+							</div>
+							<small>Supply executable name only, no path.<br/>Should be in the same folder as GUI.</small>
+						</div>
+						
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-3 control-label">GUI license key</label>
+							<div class="col-xs-6">
+								<input type="text" data-minlength="50" class="form-control edit-config-input" id="edit-config-apiKeys-ui-key"/>
+							</div>
+							<small>Your trial or paid<br/>license key</small>
+						</div>
+						
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Poloniex API key</label>
+							<div class="col-xs-7">
+								<input type="text" data-minlength="30" class="form-control edit-config-input" id="edit-config-apiKeys-poloniex-key"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Poloniex API secret</label>
+							<div class="col-xs-7">
+								<input type="password" data-minlength="100" class="form-control edit-config-input" id="edit-config-apiKeys-poloniex-secret"/>
+							</div>
+						</div>
+						
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Kraken API key</label>
+							<div class="col-xs-7">
+								<input type="text" data-minlength="40" class="form-control edit-config-input" id="edit-config-apiKeys-kraken-key"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Kraken API secret</label>
+							<div class="col-xs-7">
+								<input type="password" data-minlength="50" class="form-control edit-config-input" id="edit-config-apiKeys-kraken-secret"/>
+							</div>
+						</div>
+						
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Bittrex API key</label>
+							<div class="col-xs-7">
+								<input type="text" data-minlength="30" class="form-control edit-config-input" id="edit-config-apiKeys-bittrex-key"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Bittrex API secret</label>
+							<div class="col-xs-7">
+								<input type="password" data-minlength="30"  class="form-control edit-config-input" id="edit-config-apiKeys-bittrex-secret"/>
+							</div>
+						</div>
+						
+						<hr class="form-hr"/>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Cryptopia API key</label>
+							<div class="col-xs-7">
+								<input type="text" data-minlength="30" class="form-control edit-config-input" id="edit-config-apiKeys-cryptopia-key"/>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label style="text-align:left" class="col-xs-4 control-label">Cryptopia API secret</label>
+							<div class="col-xs-7">
+								<input type="password" data-minlength="30"  class="form-control edit-config-input" id="edit-config-apiKeys-cryptopia-secret"/>
+							</div>
+						</div>
+						
+						<hr class="form-hr"/>
+
+						
+						<div class="form-group">
+							<label style="text-align:left;" class="col-xs-4 control-label">IP address whitelist</label>
+							<div class="col-xs-3" style="text-align:center;">
+								<input id="edit-config-ipWhitelist-ipAddress" type="text" class="form-control input-sm edit-config-input"/>
+								<a href="javascript:void(0)" onclick="socket.emit('getIpAddress')" style="font-size: 10px;" onclick="">Current IP address</a>
+							</div>
+							<div class="col-xs-1">
+								<button id="edit-config-ipWhitelist-add" class="btn btn-sm btn-basic" type="button" style="width: 28px; height: 28px; " disabled>&gt;</button>
+								<button id="edit-config-ipWhitelist-delete" class="btn btn-sm btn-basic" type="button" style="width: 28px; height: 28px; margin-top: 3px;" disabled>&lt;</button><br/>
+							</div>
+							<div class="col-xs-3">
+								<select id="edit-config-ipWhitelist" size="3" class="form-control edit-config-input" style="font-size:12px;"></select>
+							</div>
+						</div>
+						
+					</div>
+					
+				</form>
+
+			  </div>
+			  <div class="modal-footer">
+				<span style="margin-right:15px; font-style:italic">Saving will shut down the GUI, restart required</span>
+				<button type="button" id="editConfigCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" id="editConfigSave" class="btn btn-primary">Save</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+	
+		
+		<!-- Error Bots Modal -->
+		<div class="modal fade" id="errorBotsModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="errorBotsLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h4 class="modal-title" id="configBotLabel">Error getting bots</h4>
+			  </div>
+			  <div id="errorBotsBody" class="modal-body"></div>
+			  <div class="modal-footer">
+				<span style="margin-right:15px; font-style:italic">If you can't solve this error, try reload your bots from the gunbot configuration.</span>
+				<button type="button" id="errorBotsReset" data-dismiss="modal" onclick="socket.emit('resetBots');" class="btn btn-danger">Reload bots</button>
+				<button type="button" id="errorBotsRetry" data-dismiss="modal" onclick="window.location.reload();" class="btn btn-primary">Retry</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+			
+			
+		<!-- Error Socket Modal -->
+		<div class="modal fade" id="errorSocketModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="errorSocketLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h4 class="modal-title" id="configBotLabel">Error connecting to socket</h4>
+			  </div>
+			  <div id="errorSocketBody" class="modal-body"> </div>
+			  <div class="modal-footer">
+				<button type="button" id="errorSocketRefresh" data-dismiss="modal" onclick="window.location.reload();" class="btn btn-primary">Refresh</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Restart required Modal -->
+		<div class="modal fade" id="restartRequiredModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="restartRequiredLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h4 class="modal-title" id="restartRequiredLbael">Restart required</h4>
+			  </div>
+			  <div id="restartRequiredBody" class="modal-body">
+				The GUI server has shut down, please restart it, then refresh
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" id="restartRequiredRefresh" data-dismiss="modal" onclick="window.location.reload();" class="btn btn-primary">Refresh</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+			
+			
+		<!-- New Version Modal -->
+		<div class="modal fade" id="newVersionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="newVersionLabel" style="color:black;">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h4 class="modal-title" id="newVersionLbael">New version available!</h4>
+			  </div>
+			  <div id="newVersionDownload" style="border-bottom: solid 1px #e5e5e5;" class="modal-body"></div>
+			  <div id="newVersionBody" style="max-height:400px; overflow-y:auto" class="modal-body white-track-background"></div>
+			  <div class="modal-footer">
+				<button type="button" id="newVersionRemind" data-dismiss="modal" class="btn btn-default">Remind me later</button>
+				<button type="button" id="newVersionOkay" data-dismiss="modal" class="btn btn-primary">Okay, got it</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<script src="js/lib/velocity-1.5.0-min.js"></script>
+		<script src="js/lib/hammer-2.0.8-min.js"></script>
+		<script src="js/lib/muuri-0.3.0-min.js"></script>
+		
+	</body>
+
+</html>

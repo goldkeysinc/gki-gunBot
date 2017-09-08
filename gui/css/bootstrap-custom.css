@@ -1,0 +1,83 @@
+.smooth-transition {
+	-webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+	-moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+	-o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+	transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+.main-col {
+	font-size:11px;
+	color: #00FF00;
+}
+
+.toolbar {
+	background-color: #1b1b1b;
+	border: solid 2px #141414;
+	border-radius: 4px;
+	color: #383838;
+}
+
+.toolbar-cell {
+	border-right:2px solid #141414;
+	vertical-align: middle;
+}
+
+.toolbar-cell-table {
+	 margin: auto;
+}
+
+
+.bot-tab {
+	padding: 10px;
+	margin-top: -2px;
+	border-right: solid 2px #141414;
+	border-left: solid 2px #141414;
+	border-bottom: solid 2px #141414;
+	border-radius: 4px;
+	height: 350px;
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.optionsBar {
+	line-height: 60px;
+	vertical-align: middle;
+	width:100%;
+	min-width: 100%;
+	max-width: 100%;
+	text-align: center;
+	font-size: 25px;
+}
+
+
+.btn-secondary {
+	background-color: darkgray;
+	color: #333;
+}
+
+
+
+.dropdown-toggle {
+	background:#d3d3d3 !important;
+}
+
+.dropdown-menu {
+	background-color: #d3d3d3 !important;
+}
+
+
+
+.form-group {
+	margin-bottom:5px;
+}
+
+.form-hr {
+	border-top: 1px solid #e5e5e5;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+

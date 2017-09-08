@@ -1,0 +1,751 @@
+﻿
+2017-09-06 04:00:37: Pair deleted from gunbot configuration | BTC_DASH | Poloniex
+2017-09-06 04:00:55: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:00:56: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:02:52: Pair deleted from gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 04:02:57: Pair added to gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 04:04:28: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:06:16: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:07:03: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:07:57: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:08:27: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:10:06: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:10:08: Error getting trade history for Poloniex: BTC_BTCD, "statusCode 429"
+2017-09-06 04:11:33: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:12:29: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:13:08: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:15:04: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:15:46: Pair deleted from gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 04:19:14: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:19:15: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:21:16: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 04:22:26: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 04:23:22: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:23:23: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:24:03: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 04:26:00: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 04:26:22: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:26:23: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:27:14: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 04:28:07: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 04:30:22: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 04:30:38: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:30:39: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:32:05: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 04:32:52: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 04:33:44: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 04:36:14: Pair deleted from gunbot configuration | BTC_LTC | Poloniex
+2017-09-06 04:36:21: Pair added to gunbot configuration | BTC_LTC | Poloniex
+2017-09-06 04:37:05: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 04:38:03: Pair added to gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 04:38:51: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 04:39:29: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:39:29: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:52:51: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 04:54:40: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 04:55:43: Trial version will shut down in 20 hours (key is valid for a week)
+2017-09-06 05:07:29: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 05:09:19: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 05:11:04: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 05:12:20: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 05:12:32: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 05:12:35: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 05:15:57: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 05:17:03: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 05:17:15: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 05:17:16: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 05:17:28: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-06 05:19:24: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 05:20:16: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 05:20:30: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 05:20:43: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 05:21:17: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 05:21:40: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 05:22:17: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 05:22:28: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 05:23:15: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-06 05:23:18: Pair added to gunbot configuration | BTC_DASH | Poloniex
+2017-09-06 05:24:38: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 05:24:39: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 05:25:33: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 05:25:41: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 05:27:16: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-06 05:29:50: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 05:55:43: Trial version will shut down in 19 hours (key is valid for a week)
+2017-09-06 06:04:14: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 06:07:15: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 06:55:43: Trial version will shut down in 18 hours (key is valid for a week)
+2017-09-06 07:55:43: Trial version will shut down in 17 hours (key is valid for a week)
+2017-09-06 08:14:06: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-06 08:55:43: Trial version will shut down in 16 hours (key is valid for a week)
+2017-09-06 09:55:43: Trial version will shut down in 15 hours (key is valid for a week)
+2017-09-06 10:15:40: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 10:19:53: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 10:25:35: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 10:36:38: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 10:53:07: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 10:55:43: Trial version will shut down in 14 hours (key is valid for a week)
+2017-09-06 10:58:14: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-06 11:02:13: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 11:32:09: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 11:34:12: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 11:34:42: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 11:44:15: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 11:44:15: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-06 11:48:14: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 11:52:09: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 11:52:14: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 11:55:43: Trial version will shut down in 13 hours (key is valid for a week)
+2017-09-06 12:00:09: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 12:00:09: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-06 12:06:12: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 12:16:20: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-06 12:20:15: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 12:22:09: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-06 12:22:11: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 12:24:13: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 12:26:10: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 12:38:11: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 12:38:13: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 12:55:43: Trial version will shut down in 12 hours (key is valid for a week)
+2017-09-06 13:18:41: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-06 13:18:41: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 13:22:08: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 13:26:12: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 13:28:15: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 13:28:16: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 13:34:10: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 13:38:16: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-06 13:38:20: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 13:40:21: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 13:55:43: Trial version will shut down in 11 hours (key is valid for a week)
+2017-09-06 14:00:14: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-06 14:02:09: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 14:12:13: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 14:12:14: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-06 14:38:16: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-06 14:38:16: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-06 14:38:17: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-06 14:55:43: Trial version will shut down in 10 hours (key is valid for a week)
+2017-09-06 15:20:12: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-06 15:20:59: Client disconnected with IP: "::ffff:96.85.108.102"
+2017-09-06 15:21:00: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-06 15:26:47: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:27:39: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:27:54: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 15:30:10: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 15:30:17: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 15:30:24: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 15:30:42: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 15:30:59: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:31:45: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 15:31:58: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 15:32:09: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-06 15:35:33: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 15:36:46: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 15:36:56: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:38:09: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 15:40:11: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 15:40:25: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 15:46:41: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 15:47:03: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 15:47:19: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 15:48:56: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:49:17: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 15:50:22: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 15:50:40: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-06 15:52:26: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:52:35: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-06 15:52:36: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 15:55:31: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 15:55:43: Trial version will shut down in 9 hours (key is valid for a week)
+2017-09-06 15:56:12: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-06 16:01:29: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 16:01:31: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-06 16:26:42: Client disconnected with IP: "::ffff:96.85.108.102"
+2017-09-06 16:26:42: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-06 16:31:57: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 16:32:13: Pair deleted from gunbot configuration | BTC_XMR | Poloniex
+2017-09-06 16:32:18: Pair added to gunbot configuration | BTC_XMR | Poloniex
+2017-09-06 16:34:24: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 16:34:44: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 16:34:57: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 16:35:05: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 16:35:05: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 16:35:11: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 16:35:18: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 16:35:23: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 16:35:31: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 16:35:36: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-06 16:45:24: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 16:55:43: Trial version will shut down in 8 hours (key is valid for a week)
+2017-09-06 16:59:09: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 17:00:29: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 17:49:35: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-06 17:49:35: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 17:54:08: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-06 17:55:43: Trial version will shut down in 7 hours (key is valid for a week)
+2017-09-06 18:13:16: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-06 18:13:16: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 18:54:11: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 18:55:43: Trial version will shut down in 6 hours (key is valid for a week)
+2017-09-06 19:13:44: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-06 19:13:44: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 19:14:07: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 19:14:25: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-06 19:14:31: Saving bot configuration for "BTC_BTCD" on "poloniex"
+2017-09-06 19:14:39: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 19:14:45: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 19:14:54: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 19:15:00: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 19:21:09: Pair deleted from gunbot configuration | BTC_LTC | Poloniex
+2017-09-06 19:21:12: Pair deleted from gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 19:21:17: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-06 19:21:19: Pair deleted from gunbot configuration | BTC_DASH | Poloniex
+2017-09-06 19:21:22: Pair deleted from gunbot configuration | BTC_XRP | Poloniex
+2017-09-06 19:21:25: Pair deleted from gunbot configuration | BTC_ETH | Poloniex
+2017-09-06 19:21:27: Pair deleted from gunbot configuration | BTC_XMR | Poloniex
+2017-09-06 19:21:27: Gunbot stopped!
+2017-09-06 19:21:30: Pair added to gunbot configuration | BTC_XMR | Poloniex
+2017-09-06 19:21:31: Pair added to gunbot configuration | BTC_ETH | Poloniex
+2017-09-06 19:21:44: Pair added to gunbot configuration | BTC_XRP | Poloniex
+2017-09-06 19:21:45: Pair added to gunbot configuration | BTC_DASH | Poloniex
+2017-09-06 19:21:47: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-06 19:21:49: Pair added to gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 19:21:51: Pair added to gunbot configuration | BTC_LTC | Poloniex
+2017-09-06 19:22:36: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-06 19:22:36: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-06 19:22:38: Connected to PM2 daemon
+2017-09-06 19:22:38: Starting GUI server version 0.98
+2017-09-06 19:22:38: No SSL enabled, starting non-secure server
+2017-09-06 19:22:38: Web server listening on "http://104.131.170.207:8080"
+2017-09-06 19:22:38: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-06 19:22:44: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-06 19:22:53: Gunbot started!
+2017-09-06 19:44:52: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 19:54:11: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-06 20:12:02: Client disconnected with IP: "::ffff:96.85.108.102"
+2017-09-06 20:22:37: Trial version will shut down in 23 hours (key is valid for a week)
+2017-09-06 20:42:03: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 20:42:30: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 20:46:15: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 20:47:02: Pair deleted from gunbot configuration | BTC_BTCD | Poloniex
+2017-09-06 20:53:16: Client authenticated for IP: "::ffff:68.56.185.116"
+2017-09-06 20:54:12: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 21:22:37: Trial version will shut down in 22 hours (key is valid for a week)
+2017-09-06 21:30:54: Error getting trade history for Poloniex: BTC_BTCD, "statusCode 429"
+2017-09-06 21:44:01: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 21:45:45: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 21:48:44: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 21:50:08: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 21:51:23: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 21:51:28: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-06 21:52:50: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-06 22:02:54: Error getting trade history for Poloniex: BTC_BTCD, "statusCode 429"
+2017-09-06 22:07:13: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 22:10:39: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 22:22:37: Trial version will shut down in 21 hours (key is valid for a week)
+2017-09-06 22:38:51: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-06 22:38:52: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-06 22:38:53: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-06 22:38:54: Error getting trade history for Poloniex: BTC_BTCD, "statusCode 429"
+2017-09-06 22:42:52: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-06 22:47:18: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 22:52:37: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 23:04:55: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-06 23:04:56: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-06 23:04:57: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-06 23:06:58: Error getting trade history for Poloniex: BTC_BTCD, "statusCode 429"
+2017-09-06 23:09:56: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-06 23:13:38: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 23:13:52: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 23:14:09: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 23:14:19: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 23:20:57: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-06 23:22:37: Trial version will shut down in 20 hours (key is valid for a week)
+2017-09-06 23:50:53: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-06 23:52:39: Pair deleted from gunbot configuration | BTC_ETH | Poloniex
+2017-09-06 23:52:44: Pair added to gunbot configuration | BTC_ETH | Poloniex
+2017-09-06 23:52:58: Error getting trade history for Poloniex: BTC_BTCD, "statusCode 429"
+2017-09-06 23:55:31: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 23:55:41: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 23:55:55: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-06 23:56:03: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-06 23:56:18: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 23:56:27: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-06 23:56:44: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 23:57:02: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-06 23:57:19: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-06 23:57:39: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-06 23:58:31: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-06 23:59:03: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:00:23: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:00:47: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-07 00:01:08: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:01:32: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-07 00:02:17: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:02:29: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:06:22: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-07 00:09:12: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-07 00:12:44: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-07 00:13:18: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-07 00:13:38: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:14:59: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-07 00:16:52: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-07 00:18:45: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 00:22:32: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 00:22:37: Trial version will shut down in 19 hours (key is valid for a week)
+2017-09-07 00:29:54: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 00:36:58: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-07 00:39:03: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 00:39:03: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-07 00:55:48: Client disconnected with IP: "::ffff:68.56.185.116"
+2017-09-07 01:22:37: Trial version will shut down in 18 hours (key is valid for a week)
+2017-09-07 01:27:01: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-07 01:41:07: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-07 01:42:29: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 01:52:40: Pair deleted from gunbot configuration | BTC_LTC | Poloniex
+2017-09-07 01:53:06: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 01:53:09: Pair added to gunbot configuration | BTC_LTC | Poloniex
+2017-09-07 02:02:47: Pair deleted from gunbot configuration | BTC_LTC | Poloniex
+2017-09-07 02:02:47: Pair added to gunbot configuration | BTC_LTC | Poloniex
+Error: Process not found
+    at Object.Common.retErr (/__enclose_io_memfs__/node_modules/pm2/lib/Common.js:277:10)
+    at /__enclose_io_memfs__/node_modules/pm2/lib/API.js:1304:38
+    at /__enclose_io_memfs__/node_modules/async/lib/async.js:52:16
+    at /__enclose_io_memfs__/node_modules/async/lib/async.js:322:29
+    at /__enclose_io_memfs__/node_modules/async/lib/async.js:44:16
+    at /__enclose_io_memfs__/node_modules/pm2/lib/API.js:1262:18
+    at /__enclose_io_memfs__/node_modules/pm2-axon-rpc/lib/client.js:42:7
+    at Parser.<anonymous> (/__enclose_io_memfs__/node_modules/pm2-axon/lib/sockets/req.js:67:8)
+    at emitOne (events.js:115:13)
+    at Parser.emit (events.js:210:7)
+2017-09-07 02:03:32: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-07 02:03:32: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-07 02:03:32: Connected to PM2 daemon
+2017-09-07 02:03:32: Starting GUI server version 0.98
+2017-09-07 02:03:32: No SSL enabled, starting non-secure server
+2017-09-07 02:03:33: Web server listening on "http://104.131.170.207:8080"
+2017-09-07 02:03:33: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-07 02:03:38: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 02:30:01: Client authenticated for IP: "::ffff:68.56.185.116"
+2017-09-07 02:32:01: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 02:42:48: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 02:43:00: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-07 02:47:51: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-07 02:47:51: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-07 02:47:51: Connected to PM2 daemon
+2017-09-07 02:47:51: Starting GUI server version 0.98
+2017-09-07 02:47:51: No SSL enabled, starting non-secure server
+2017-09-07 02:47:51: Web server listening on "http://104.131.170.207:8080"
+2017-09-07 02:47:51: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-07 02:47:53: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 02:53:57: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 02:54:09: Pair deleted from gunbot configuration | BTC_DASH | Poloniex
+2017-09-07 02:54:17: Pair added to gunbot configuration | BTC_DASH | Poloniex
+2017-09-07 03:13:46: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-07 03:13:46: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-07 03:13:48: Connected to PM2 daemon
+2017-09-07 03:13:48: Starting GUI server version 0.98
+2017-09-07 03:13:48: No SSL enabled, starting non-secure server
+2017-09-07 03:13:48: Web server listening on "http://104.131.170.207:8080"
+2017-09-07 03:13:48: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-07 03:13:57: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 03:14:40: Gunbot started!
+2017-09-07 03:18:41: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 03:18:42: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 03:18:49: Gunbot stopped!
+2017-09-07 03:18:58: Gunbot started!
+2017-09-07 03:25:55: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-07 03:25:55: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-07 03:25:55: Connected to PM2 daemon
+2017-09-07 03:25:55: Starting GUI server version 0.98
+2017-09-07 03:25:55: No SSL enabled, starting non-secure server
+2017-09-07 03:25:56: Web server listening on "http://104.131.170.207:8080"
+2017-09-07 03:25:56: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-07 03:26:11: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 04:04:22: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-07 04:25:55: Trial version will shut down in 23 hours (key is valid for a week)
+2017-09-07 05:00:22: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-07 05:25:55: Trial version will shut down in 22 hours (key is valid for a week)
+2017-09-07 06:25:55: Trial version will shut down in 21 hours (key is valid for a week)
+2017-09-07 07:25:55: Trial version will shut down in 20 hours (key is valid for a week)
+2017-09-07 08:06:26: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-07 08:25:55: Trial version will shut down in 19 hours (key is valid for a week)
+2017-09-07 09:25:55: Trial version will shut down in 18 hours (key is valid for a week)
+2017-09-07 10:00:35: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 10:06:22: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 10:08:22: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-07 10:25:55: Trial version will shut down in 17 hours (key is valid for a week)
+2017-09-07 11:06:22: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-07 11:25:55: Trial version will shut down in 16 hours (key is valid for a week)
+2017-09-07 11:30:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-07 11:50:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 12:04:20: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-07 12:20:28: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 12:25:55: Trial version will shut down in 15 hours (key is valid for a week)
+2017-09-07 12:30:25: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-07 12:30:26: Error getting trade history for Poloniex: BTC_XMR, "statusCode 422"
+2017-09-07 12:32:21: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 12:46:22: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-07 12:56:25: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 13:25:55: Trial version will shut down in 14 hours (key is valid for a week)
+2017-09-07 13:42:08: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 13:42:08: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 13:50:45: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 13:50:45: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 14:04:40: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 14:04:40: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 14:13:48: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-07 14:25:55: Trial version will shut down in 13 hours (key is valid for a week)
+2017-09-07 15:25:55: Trial version will shut down in 12 hours (key is valid for a week)
+2017-09-07 15:54:53: Bot deleted: 
+2017-09-07 15:54:53: {
+	"gunbotVersion": "3.3.3+",
+	"exchange": "poloniex",
+	"pair": "BTC_BTCD"
+}
+2017-09-07 15:55:02: Pair deleted from gunbot configuration | BTC_LTC | Poloniex
+2017-09-07 15:55:31: Saving bot configuration for "BTC_BCH" on "poloniex"
+2017-09-07 15:55:46: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-07 15:56:47: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-07 15:56:57: Saving bot configuration for "BTC_XMR" on "poloniex"
+2017-09-07 15:57:10: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-07 15:57:45: Saving bot configuration for "BTC_LTC" on "poloniex"
+2017-09-07 15:58:02: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-07 15:58:23: Saving bot configuration for "BTC_ETH" on "poloniex"
+2017-09-07 15:58:33: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-07 15:58:49: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-07 15:59:03: Saving bot configuration for "BTC_DASH" on "poloniex"
+2017-09-07 16:00:47: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 16:00:49: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 16:20:26: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 16:20:27: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 16:20:27: Error getting exchange balances: "poloniex: statusCode 429"
+2017-09-07 16:20:35: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 16:20:35: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 16:25:55: Trial version will shut down in 11 hours (key is valid for a week)
+2017-09-07 16:42:25: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-07 16:44:43: Client whith IP "::ffff:70.195.133.93" refused, not in whitelist.
+2017-09-07 17:25:55: Trial version will shut down in 10 hours (key is valid for a week)
+2017-09-07 17:30:20: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-07 17:30:24: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 17:42:25: Client disconnected with IP: "::ffff:96.85.108.102"
+2017-09-07 18:10:27: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-07 18:25:55: Trial version will shut down in 9 hours (key is valid for a week)
+2017-09-07 18:54:56: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 18:54:56: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-07 19:00:36: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-07 19:00:41: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-07 19:04:21: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-07 19:04:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-07 19:04:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-07 19:14:03: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-07 19:15:50: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-07 19:20:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-07 19:24:06: Pair deleted from gunbot configuration | BTC_XRP | Poloniex
+2017-09-07 19:24:08: Pair deleted from gunbot configuration | BTC_ETH | Poloniex
+2017-09-07 19:24:11: Pair deleted from gunbot configuration | BTC_XMR | Poloniex
+2017-09-07 19:24:15: Pair deleted from gunbot configuration | BTC_DASH | Poloniex
+2017-09-07 19:24:17: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-07 19:24:18: Gunbot stopped!
+2017-09-07 19:25:55: Trial version will shut down in 8 hours (key is valid for a week)
+2017-09-07 20:00:46: Pair added to gunbot configuration | BTC_XRP | Poloniex
+2017-09-07 20:01:28: Gunbot started!
+2017-09-07 20:12:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-07 20:12:21: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-07 20:12:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-07 20:12:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-07 20:16:14: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:17:55: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 20:17:56: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:18:08: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 20:18:13: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:25:55: Trial version will shut down in 7 hours (key is valid for a week)
+2017-09-07 20:26:03: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 20:27:43: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 20:27:44: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:30:15: Error getting completeBalances: statusCode 429
+2017-09-07 20:30:15: Error getting completeBalances: statusCode 429
+2017-09-07 20:31:17: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 20:31:22: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:39:12: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-07 20:39:12: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-07 20:39:12: Connected to PM2 daemon
+2017-09-07 20:39:12: Starting GUI server version 0.98
+2017-09-07 20:39:12: No SSL enabled, starting non-secure server
+2017-09-07 20:39:12: Web server listening on "http://104.131.170.207:8080"
+2017-09-07 20:39:12: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-07 20:39:15: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:50:02: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 20:55:24: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-07 20:57:39: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 20:57:40: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-07 21:03:15: Error getting completeBalances: statusCode 429
+2017-09-07 21:03:15: Error getting completeBalances: statusCode 429
+2017-09-07 21:03:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-07 21:06:08: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-07 21:07:15: Error getting completeBalances: statusCode 429
+2017-09-07 21:07:15: Error getting completeBalances: statusCode 429
+2017-09-07 21:07:15: Error getting completeBalances: statusCode 429
+2017-09-07 21:07:17: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-07 21:07:18: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-07 21:31:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-07 21:31:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-07 21:33:07: Client disconnected with IP: "::ffff:96.85.108.102"
+2017-09-07 21:33:08: Client authenticated for IP: "::ffff:96.85.108.102"
+2017-09-07 21:39:12: Trial version will shut down in 23 hours (key is valid for a week)
+2017-09-07 22:00:05: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-07 22:25:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-07 22:39:12: Trial version will shut down in 22 hours (key is valid for a week)
+2017-09-07 22:55:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-07 22:55:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-07 23:21:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-07 23:21:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-07 23:21:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-07 23:21:21: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-07 23:29:15: Error getting completeBalances: statusCode 429
+2017-09-07 23:29:15: Error getting completeBalances: statusCode 429
+2017-09-07 23:33:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-07 23:33:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-07 23:33:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-07 23:39:12: Trial version will shut down in 21 hours (key is valid for a week)
+2017-09-07 23:41:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-07 23:41:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-07 23:41:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-07 23:41:21: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-07 23:59:15: Error getting completeBalances: statusCode 429
+2017-09-07 23:59:15: Error getting completeBalances: statusCode 429
+2017-09-08 00:09:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 00:09:24: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 00:17:52: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-08 00:17:53: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 00:18:02: Gunbot stopped!
+2017-09-08 00:18:06: Gunbot started!
+2017-09-08 00:19:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-08 00:19:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-08 00:27:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 00:31:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-08 00:31:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-08 00:31:22: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-08 00:31:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 00:31:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 00:37:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-08 00:37:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-08 00:37:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-08 00:39:12: Trial version will shut down in 20 hours (key is valid for a week)
+2017-09-08 00:39:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-08 00:39:21: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-08 00:39:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 00:39:24: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 00:43:15: Error getting completeBalances: statusCode 429
+2017-09-08 00:43:15: Error getting completeBalances: statusCode 429
+2017-09-08 00:48:51: Client authenticated for IP: "::ffff:68.56.185.116"
+2017-09-08 00:48:54: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-08 00:50:45: Client disconnected with IP: "::ffff:68.56.185.116"
+2017-09-08 01:07:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 01:09:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 01:09:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 01:11:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 429"
+2017-09-08 01:11:19: Error getting trade history for Poloniex: BTC_BCH, "statusCode 429"
+2017-09-08 01:11:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-08 01:11:21: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-08 01:11:22: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 01:11:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 01:17:23: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 01:19:28: Pair deleted from gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 01:19:29: Gunbot stopped!
+2017-09-08 01:50:46: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 01:50:46: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 01:50:48: Connected to PM2 daemon
+2017-09-08 01:50:48: Starting GUI server version 0.98
+2017-09-08 01:50:48: No SSL enabled, starting non-secure server
+2017-09-08 01:50:48: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 01:50:48: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 01:50:50: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 01:51:28: Saving bot configuration for "BTC_XRP" on "poloniex"
+2017-09-08 01:51:30: Pair added to gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 01:51:54: Pair added to gunbot configuration | BTC_XMR | Poloniex
+2017-09-08 01:52:01: Gunbot started!
+2017-09-08 01:58:48: Gunbot stopped!
+2017-09-08 01:58:57: Gunbot started!
+2017-09-08 01:59:03: Gunbot stopped!
+2017-09-08 01:59:04: Pair deleted from gunbot configuration | BTC_XMR | Poloniex
+2017-09-08 01:59:05: Pair deleted from gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 01:59:10: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 01:59:10: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-08 01:59:19: Pair added to gunbot configuration | BTC_XMR | Poloniex
+2017-09-08 01:59:40: Pair added to gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 01:59:47: Gunbot started!
+2017-09-08 02:00:56: Error getting trade history for Poloniex: BTC_DASH, "statusCode 429"
+2017-09-08 02:00:58: Error getting trade history for Poloniex: BTC_LTC, "statusCode 429"
+2017-09-08 02:00:58: Error getting trade history for Poloniex: BTC_ETH, "statusCode 429"
+2017-09-08 02:00:59: Error getting trade history for Poloniex: BTC_XMR, "statusCode 429"
+2017-09-08 02:04:18: Pair deleted from gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 02:04:24: Pair deleted from gunbot configuration | BTC_XMR | Poloniex
+2017-09-08 02:04:24: Gunbot stopped!
+2017-09-08 02:05:06: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-08 02:05:06: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 02:05:12: Pair added to gunbot configuration | BTC_ETH | Poloniex
+2017-09-08 02:05:25: Gunbot started!
+2017-09-08 02:06:45: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 02:06:45: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 02:06:47: Connected to PM2 daemon
+2017-09-08 02:06:47: Starting GUI server version 0.98
+2017-09-08 02:06:47: No SSL enabled, starting non-secure server
+2017-09-08 02:06:47: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 02:06:47: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 02:06:54: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 02:07:03: Gunbot started!
+2017-09-08 02:07:36: Pair deleted from gunbot configuration | BTC_ETH | Poloniex
+2017-09-08 02:07:36: Gunbot stopped!
+2017-09-08 02:12:09: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 02:12:09: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 02:12:11: Connected to PM2 daemon
+2017-09-08 02:12:11: Starting GUI server version 0.98
+2017-09-08 02:12:11: No SSL enabled, starting non-secure server
+2017-09-08 02:12:11: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 02:12:11: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 02:12:14: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 02:14:02: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-08 02:14:20: Gunbot started!
+2017-09-08 02:14:56: Gunbot stopped!
+2017-09-08 02:15:00: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-08 03:00:05: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 03:00:05: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 03:00:06: Connected to PM2 daemon
+2017-09-08 03:00:06: Starting GUI server version 0.98
+2017-09-08 03:00:06: No SSL enabled, starting non-secure server
+2017-09-08 03:00:06: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 03:00:06: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 03:00:09: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 03:25:02: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-08 03:25:04: Pair added to gunbot configuration | BTC_DASH | Poloniex
+2017-09-08 03:25:05: Pair added to gunbot configuration | BTC_LTC | Poloniex
+2017-09-08 03:25:09: Gunbot started!
+2017-09-08 03:25:23: Pair deleted from gunbot configuration | BTC_DASH | Poloniex
+2017-09-08 03:25:26: Pair deleted from gunbot configuration | BTC_BCH | Poloniex
+2017-09-08 03:25:28: Pair deleted from gunbot configuration | BTC_LTC | Poloniex
+2017-09-08 03:25:28: Gunbot stopped!
+2017-09-08 03:25:42: Pair added to gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 03:25:52: Gunbot started!
+2017-09-08 03:27:22: Pair deleted from gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 03:27:22: Gunbot stopped!
+2017-09-08 04:00:05: Trial version will shut down in 23 hours (key is valid for a week)
+2017-09-08 05:00:05: Trial version will shut down in 22 hours (key is valid for a week)
+2017-09-08 06:00:05: Trial version will shut down in 21 hours (key is valid for a week)
+2017-09-08 07:00:05: Trial version will shut down in 20 hours (key is valid for a week)
+2017-09-08 08:00:05: Trial version will shut down in 19 hours (key is valid for a week)
+2017-09-08 09:00:05: Trial version will shut down in 18 hours (key is valid for a week)
+2017-09-08 09:32:20: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-08 10:00:05: Trial version will shut down in 17 hours (key is valid for a week)
+2017-09-08 11:00:05: Trial version will shut down in 16 hours (key is valid for a week)
+2017-09-08 11:20:12: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-08 11:20:12: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 11:21:19: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 11:21:19: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 11:21:21: Connected to PM2 daemon
+2017-09-08 11:21:21: Starting GUI server version 0.98
+2017-09-08 11:21:21: No SSL enabled, starting non-secure server
+2017-09-08 11:21:21: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 11:21:21: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 12:21:19: Trial version will shut down in 23 hours (key is valid for a week)
+2017-09-08 13:11:06: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 13:11:06: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 13:11:07: Connected to PM2 daemon
+2017-09-08 13:11:07: Starting GUI server version 0.98
+2017-09-08 13:11:07: No SSL enabled, starting non-secure server
+2017-09-08 13:11:08: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 13:11:08: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 13:11:14: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 13:48:11: Client whith IP "::ffff:99.203.143.97" refused, not in whitelist.
+2017-09-08 13:48:11: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:48:16: Client whith IP "::ffff:99.203.143.97" refused, not in whitelist.
+2017-09-08 13:48:16: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:48:20: Client whith IP "::ffff:99.203.143.97" refused, not in whitelist.
+2017-09-08 13:48:20: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:48:22: Client whith IP "::ffff:99.203.143.97" refused, not in whitelist.
+2017-09-08 13:48:22: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:48:28: Client whith IP "::ffff:99.203.143.97" refused, not in whitelist.
+2017-09-08 13:48:28: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:49:00: Saving configuration, please restart GUI server
+2017-09-08 13:49:13: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 13:49:13: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 13:49:14: Connected to PM2 daemon
+2017-09-08 13:49:14: Starting GUI server version 0.98
+2017-09-08 13:49:14: No SSL enabled, starting non-secure server
+2017-09-08 13:49:14: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 13:49:14: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 13:49:15: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 13:50:04: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-08 13:50:04: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 13:52:14: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-08 13:52:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-08 13:56:34: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:57:06: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:58:23: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:58:32: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:58:35: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 13:58:58: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 14:01:48: Invalid password for IP: "::ffff:99.203.143.97"
+2017-09-08 14:05:49: Client authenticated for IP: "::ffff:99.203.143.97"
+2017-09-08 14:06:31: Pair added to gunbot configuration | BTC_BCH | Poloniex
+2017-09-08 14:06:34: Pair added to gunbot configuration | BTC_DASH | Poloniex
+2017-09-08 14:06:36: Pair added to gunbot configuration | BTC_ETH | Poloniex
+2017-09-08 14:06:38: Pair added to gunbot configuration | BTC_LTC | Poloniex
+2017-09-08 14:06:40: Pair added to gunbot configuration | BTC_XMR | Poloniex
+2017-09-08 14:06:41: Pair added to gunbot configuration | BTC_XRP | Poloniex
+2017-09-08 14:06:47: Gunbot started!
+2017-09-08 14:07:47: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-08 14:07:47: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 14:08:09: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-08 14:08:13: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 14:09:17: Client disconnected with IP: "::ffff:99.203.143.97"
+2017-09-08 14:12:01: Trial license enabled for exchanges: poloniex, bittrex, kraken, cryptopia
+2017-09-08 14:12:01: Trial countdown started, exitting in 24 hours (key is valid for a week)
+2017-09-08 14:12:03: Connected to PM2 daemon
+2017-09-08 14:12:03: Starting GUI server version 0.98
+2017-09-08 14:12:03: No SSL enabled, starting non-secure server
+2017-09-08 14:12:03: Web server listening on "http://104.131.170.207:8080"
+2017-09-08 14:12:03: Open your browser and go to "http://104.131.170.207:8080"
+2017-09-08 14:12:08: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 14:13:02: Client authenticated for IP: "::ffff:99.203.143.97"
+2017-09-08 14:13:18: Gunbot started!
+2017-09-08 14:14:17: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-08 14:15:59: Client disconnected with IP: "::ffff:99.203.143.97"
+2017-09-08 14:16:20: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-08 14:16:35: Client authenticated for IP: "::ffff:99.203.143.97"
+2017-09-08 14:16:48: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-08 14:17:08: Client disconnected with IP: "::ffff:99.203.143.97"
+2017-09-08 14:17:18: Client authenticated for IP: "::ffff:99.203.143.97"
+2017-09-08 14:18:24: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-08 14:18:26: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-08 14:20:29: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-08 14:20:29: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-08 14:20:36: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-08 14:22:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-08 14:22:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-08 14:23:36: Client disconnected with IP: "::ffff:99.203.143.97"
+2017-09-08 14:24:18: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-08 14:24:20: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-08 14:28:24: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-08 14:29:35: Gunbot stopped!
+2017-09-08 14:30:25: Error getting trade history for Poloniex: BTC_XRP, "statusCode 422"
+2017-09-08 14:30:28: Error getting trade history for Poloniex: BTC_ETH, "statusCode 422"
+2017-09-08 14:36:17: Error getting trade history for Poloniex: BTC_BCH, "statusCode 422"
+2017-09-08 15:12:01: Trial version will shut down in 23 hours (key is valid for a week)
+2017-09-08 16:12:01: Trial version will shut down in 22 hours (key is valid for a week)
+2017-09-08 16:20:16: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-08 17:12:01: Trial version will shut down in 21 hours (key is valid for a week)
+2017-09-08 18:08:20: Error getting trade history for Poloniex: BTC_LTC, "statusCode 422"
+2017-09-08 18:08:20: Error getting trade history for Poloniex: BTC_DASH, "statusCode 422"
+2017-09-08 18:12:01: Trial version will shut down in 20 hours (key is valid for a week)
+2017-09-08 18:39:00: Client disconnected with IP: "::ffff:64.78.220.3"
+2017-09-08 18:39:00: Client authenticated for IP: "::ffff:64.78.220.3"
+2017-09-08 19:12:01: Trial version will shut down in 19 hours (key is valid for a week)
+2017-09-08 19:24:15: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 19:44:51: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-08 19:44:51: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 20:07:18: Client disconnected with IP: "::ffff:69.207.52.192"
+2017-09-08 20:07:19: Client authenticated for IP: "::ffff:69.207.52.192"
+2017-09-08 20:12:01: Trial version will shut down in 18 hours (key is valid for a week)
